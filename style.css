@@ -1,0 +1,123 @@
+/* ==========================================
+   VARIABLES DE COLOR Y FUENTES
+   ========================================== */
+:root {
+    --bg-color: #f4f1ea;        /* Crema cálido para el fondo */
+    --text-main: #2c1e16;       /* Marrón oscuro espresso para el texto */
+    --text-muted: #666666;      /* Gris para textos secundarios */
+    --card-bg: #ffffff;         /* Blanco puro para las tarjetas */
+    --primary: #4CAF50;         /* Verde para botones de acción positiva */
+    --danger: #f44336;          /* Rojo para eliminar/cancelar */
+    --accent: #FF9800;          /* Naranja para advertencias o pausas */
+}
+
+/* ==========================================
+   ESTILOS BASE Y TIPOGRAFÍA
+   ========================================== */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fdfaf5; /* El color crema de fondo */
+}
+
+/* Encabezado fijo en la parte superior */
+header {
+    background: none !important;
+    border: none !important;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+/* Contenedor principal de la app */
+main {
+    padding: 20px;
+    max-width: 600px; /* Si se abre en PC, no se estira de forma fea */
+    margin: 0 auto;   /* Centra el contenido en pantallas grandes */
+    box-sizing: border-box;
+}
+
+h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid rgba(44, 30, 22, 0.1);
+    padding-bottom: 10px;
+}
+
+h3 {
+    font-size: 18px;
+    color: var(--text-main);
+}
+
+/* ==========================================
+   ESTILOS PARA FORMULARIOS E INPUTS
+   ========================================== */
+input[type="text"],
+input[type="number"] {
+    font-family: inherit;
+    font-size: 16px; /* 16px evita que el iPhone haga auto-zoom al escribir */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fafafa;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    outline: none;
+    border-color: var(--text-main);
+    box-shadow: 0 0 0 2px rgba(44, 30, 22, 0.2);
+}
+
+label {
+    font-size: 14px;
+    color: var(--text-main);
+}
+
+/* ==========================================
+   ANIMACIONES Y MEJORAS VISUALES
+   ========================================== */
+
+/* Todos los botones tendrán una transición suave al tocarlos */
+button {
+    font-family: inherit;
+    transition: transform 0.1s ease, filter 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Efecto de "presionar" el botón */
+button:active {
+    transform: scale(0.96);
+}
+
+/* Cuando pasas el ratón (en PC) los botones se iluminan un poco */
+button:hover {
+    filter: brightness(1.1);
+}
+
+/* Sombras suaves para las tarjetas de recetas que creamos en JS */
+div[style*="border: 1px solid #ccc"] {
+    border: none !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05) !important;
+    transition: transform 0.2s ease;
+}
+
+/* Pequeño efecto al mantener presionada una tarjeta de receta */
+div[style*="border: 1px solid #ccc"]:active {
+    transform: scale(0.98);
+}
+
+/* Modificamos el scrollbar para que sea elegante (Solo para Chrome/Safari) */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(44, 30, 22, 0.2);
+    border-radius: 10px;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Coffee Timer</title>
+    
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+    <meta name="theme-color" content="#2c1e16"> 
+    
+    <style>
+        /* ==========================================
+           1. CARGA DE TIPOGRAFÍAS LOCALES
+           ========================================== */
+        @font-face {
+            font-family: 'montserrattitulo';
+            src: url('./montserrattitulo.ttf') format('truetype');
+            font-weight: 900;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'montserratsubtitulos';
+            src: url('./montserratsubtitulos.ttf') format('truetype');
+            font-weight: 300;
+            font-style: normal;
+            font-display: swap;
+        }
+
+
+        @font-face {
+            font-family: 'montserrattexto';
+            src: url('./montserrattexto.ttf') format('truetype');
+            font-weight: 300;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        /* ==========================================
+           2. ESTILOS GENERALES
+           ========================================== */
+        body {
+            font-family: Arial, Helvetica, sans-serif; /* Fuente limpia por defecto para el resto de la app */
+            background-color: #fdfaf5;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* Obliga a inputs y botones a respetar la fuente limpia */
+        input, button {
+            font-family: inherit; 
+        }
+    </style>
+</head>
+<body>
+    <main id="app-content"></main>
+
+    <script src="app.js?v=2.5"></script>
+</body>
+</html>
