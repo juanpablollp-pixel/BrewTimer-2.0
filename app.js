@@ -130,11 +130,11 @@ function renderRatioCalculator() {
                 align-items: center; 
                 justify-content: center;
             ">
-                <img src="volver.png" alt="Volver" style="width: 100%; height: 100%; object-fit: contain;">
+                <img src="volver.png" alt="Volver" style="width: 80%; height: 80%; object-fit: contain;">
             </button>
             
-            <h2 style="font-family: 'montserratsubtitulos', serif; font-size: 26px; color: #2c1e16; margin: 0; line-height: 1; text-align: center;">
-                Calculadora
+            <h2 style="font-family: 'montserrattitulo', serif; font-size: 20px; color: #2a2529; margin: 0; line-height: 1; text-align: center;">
+                CALCULADORA
             </h2>
             
             <div style="width: 40px;"></div> 
@@ -143,8 +143,8 @@ function renderRatioCalculator() {
         
         <div id="calculadora-container" style="padding: 0 20px;">
             
-            <div style="background-color: #2c1e16; border-radius: 15px; padding: 25px 20px; color: #fdfaf5; text-align: center; margin-bottom: 35px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
-                <div style="font-size: 13px; text-transform: uppercase; letter-spacing: 2px; color: #d4a373; margin-bottom: 5px;">Ratio Seleccionado</div>
+            <div style="background-color: #2a2529; border-radius: 15px; padding: 25px 20px; color: #f3f0e7; text-align: center; margin-bottom: 35px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
+                <div style="font-size: 13px; text-transform: uppercase; letter-spacing: 2px; color: #f3f0e7; margin-bottom: 5px;">Ratio Seleccionado</div>
                 <div style="font-size: 48px; margin-bottom: 15px; font-family: 'montserratsubtitulos', serif;">
                     1 : <span id="display-ratio">15</span>
                 </div>
@@ -154,7 +154,7 @@ function renderRatioCalculator() {
                         <div style="font-size: 12px; color: #bbb; margin-bottom: 5px;">Café</div>
                         <div style="font-size: 22px; font-family: 'montserratsubtitulos';">☕ <span id="display-coffee">15</span>g</div>
                     </div>
-                    <div style="font-size: 24px; color: #d4a373;">=</div>
+                    <div style="font-size: 24px; color: #f3f0e7;">=</div>
                     <div>
                         <div style="font-size: 12px; color: #bbb; margin-bottom: 5px;">Agua</div>
                         <div style="font-size: 22px; font-family: 'montserratsubtitulos';">💧 <span id="display-water">225</span>g</div>
@@ -166,15 +166,15 @@ function renderRatioCalculator() {
                 
                 <div>
                     <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
-                        <label style="font-family: 'montserrattexto'; color: #2c1e16; font-size: 16px;">⚖️ Ratio (1:x)</label>
+                        <label style="font-family: 'montserrattexto'; color: #2a2529; font-size: 16px;">⚖️ Ratio (1:x)</label>
                         <span style="color: #888; font-family: 'montserrattexto'; font-size: 16px;" id="label-ratio">15</span>
                     </div>
-                    <input type="range" id="slider-ratio" min="10" max="20" step="1" value="15" oninput="calcDesdeRatio()" style="width: 100%; height: 8px; border-radius: 5px; accent-color: #2c1e16; cursor: pointer;">
+                    <input type="range" id="slider-ratio" min="10" max="20" step="1" value="15" oninput="calcDesdeRatio()" style="width: 100%; height: 8px; border-radius: 5px; accent-color: #2a2529; cursor: pointer;">
                 </div>
 
                 <div>
                     <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
-                        <label style="font-family: 'montserrattexto'; color: #2c1e16; font-size: 16px;">☕ Café (g)</label>
+                        <label style="font-family: 'montserrattexto'; color: #2a2529; font-size: 16px;">☕ Café (g)</label>
                         <span style="color: #888; font-family: 'montserrattexto'; font-size: 16px;" id="label-coffee">15g</span>
                     </div>
                     <input type="range" id="slider-coffee" min="5" max="50" step="0.5" value="15" oninput="calcDesdeCafe()" style="width: 100%; height: 8px; border-radius: 5px; accent-color: #795548; cursor: pointer;">
@@ -182,7 +182,7 @@ function renderRatioCalculator() {
 
                 <div>
                     <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
-                        <label style="font-family: 'montserrattexto'; color: #2c1e16; font-size: 16px;">💧 Agua (g)</label>
+                        <label style="font-family: 'montserrattexto'; color: #2a2529; font-size: 16px;">💧 Agua (g)</label>
                         <span style="color: #888; font-family: 'montserrattexto'; font-size: 16px;" id="label-water">225g</span>
                     </div>
                     <input type="range" id="slider-water" min="50" max="1000" step="5" value="225" oninput="calcDesdeAgua()" style="width: 100%; height: 8px; border-radius: 5px; accent-color: #2196F3; cursor: pointer;">
@@ -307,73 +307,73 @@ function renderRecipeForm(recipeToEdit = null) {
     const recipeId = isEditing ? recipeToEdit.id : '';
 
     appContent.innerHTML = `
-        <h2 style="text-align: center; font-family: 'Croissant One', serif; color: #2c1e16; margin-top: 20px;">${title}</h2>
+        <h2 style="text-align: center; font-family: 'montserrattitulo', serif; color: #2a2529; margin-top: 20px;">${title}</h2>
         
         <form id="recipe-form" onsubmit="saveRecipe(event)" style="display: flex; flex-direction: column; gap: 15px; max-width: 400px; margin: 0 auto; padding: 0 15px 40px 15px;">
 
             <input type="hidden" id="r-id" value="${recipeId}">
 
             <div style="display: flex; flex-direction: column; gap: 5px;">
-                <label style="font-size: 14px; color: #555; font-weight: bold;">Nombre de la Preparación:</label>
-                <input type="text" id="r-name" required placeholder="Ej. Mi V60 Mañanero" value="${isEditing ? recipeToEdit.name : ''}" style="padding: 12px; border: 1px solid #ccc; border-radius: 8px; font-size: 16px;">
+                <label style="font-size: 14px; font-family: 'montserrattexto'; color: #2a2529; font-weight: bold;">Nombre de la Preparación:</label>
+                <input type="text" id="r-name" required placeholder="Ej. Mi V60 Mañanero" value="${isEditing ? recipeToEdit.name : ''}" style="padding: 12px; border: 1px solid #ccc; border-radius: 8px; font-size: 16px; font-family: 'montserrattexto';">
             </div>
 
             <div style="display: flex; flex-direction: column; gap: 5px;">
-                <label style="font-size: 14px; color: #555; font-weight: bold;">Método:</label>
-                <input type="text" id="r-method" required placeholder="Ej. V60, Chemex, Aeropress" value="${isEditing ? recipeToEdit.method : ''}" style="padding: 12px; border: 1px solid #ccc; border-radius: 8px; font-size: 16px;">
+                <label style="font-size: 14px; font-family: 'montserrattexto'; color: #2a2529; font-weight: bold;">Método:</label>
+                <input type="text" id="r-method" required placeholder="Ej. V60, Chemex, Aeropress" value="${isEditing ? recipeToEdit.method : ''}" style="padding: 12px; border: 1px solid #ccc; border-radius: 8px; font-size: 16px; font-family: 'montserrattexto';">
             </div>
 
             <div style="display: flex; gap: 10px;">
                 <div style="flex: 1; display: flex; flex-direction: column; gap: 5px;">
-                    <label style="font-size: 14px; color: #555; font-weight: bold;">Café (g):</label>
-                    <input type="number" id="r-coffee" required value="${isEditing ? recipeToEdit.coffee : ''}" style="width: 100%; padding: 12px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 8px; font-size: 16px;">
+                    <label style="font-size: 14px; font-family: 'montserrattexto'; color: #2a2529; font-weight: bold;">Café (g):</label>
+                    <input type="number" id="r-coffee" required value="${isEditing ? recipeToEdit.coffee : ''}" style="width: 100%; padding: 12px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 8px; font-size: 16px; font-family: 'montserrattexto';">
                 </div>
                 <div style="flex: 1; display: flex; flex-direction: column; gap: 5px;">
-                    <label style="font-size: 14px; color: #555; font-weight: bold;">Agua (g):</label>
-                    <input type="number" id="r-water" required value="${isEditing ? recipeToEdit.water : ''}" style="width: 100%; padding: 12px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 8px; font-size: 16px;">
-                </div>
-            </div>
-
-            <div style="display: flex; gap: 10px;">
-                <div style="flex: 1; display: flex; flex-direction: column; gap: 5px;">
-                    <label style="font-size: 14px; color: #555; font-weight: bold;">Temp. °C:</label>
-                    <input type="number" id="r-temp" value="${isEditing && recipeToEdit.temp ? recipeToEdit.temp : ''}" style="width: 100%; padding: 12px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 8px; font-size: 16px;">
-                </div>
-                <div style="flex: 1; display: flex; flex-direction: column; gap: 5px;">
-                    <label style="font-size: 14px; color: #555; font-weight: bold;">Molienda:</label>
-                    <input type="text" id="r-grind" placeholder="Ej. Media" value="${isEditing ? recipeToEdit.grind : ''}" style="width: 100%; padding: 12px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 8px; font-size: 16px;">
+                    <label style="font-size: 14px; font-family: 'montserrattexto'; color: #2a2529; font-weight: bold;">Agua (g):</label>
+                    <input type="number" id="r-water" required value="${isEditing ? recipeToEdit.water : ''}" style="width: 100%; padding: 12px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 8px; font-size: 16px; font-family: 'montserrattexto';">
                 </div>
             </div>
 
             <div style="display: flex; gap: 10px;">
                 <div style="flex: 1; display: flex; flex-direction: column; gap: 5px;">
-                    <label style="font-size: 14px; color: #555; font-weight: bold;">Tueste:</label>
-                    <input type="text" id="r-roast" placeholder="Ej. Claro" value="${isEditing && recipeToEdit.roast ? recipeToEdit.roast : ''}" style="width: 100%; padding: 12px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 8px; font-size: 16px;">
+                    <label style="font-size: 14px; font-family: 'montserrattexto'; color: #2a2529; font-weight: bold;">Temp. °C:</label>
+                    <input type="number" id="r-temp" value="${isEditing && recipeToEdit.temp ? recipeToEdit.temp : ''}" style="width: 100%; padding: 12px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 8px; font-size: 16px; font-family: 'montserrattexto';">
                 </div>
                 <div style="flex: 1; display: flex; flex-direction: column; gap: 5px;">
-                    <label style="font-size: 14px; color: #555; font-weight: bold;"> Ratio:</label>
-                    <input type="text" id="r-ratio" placeholder="Ej. 1:15" value="${isEditing && recipeToEdit.ratio ? recipeToEdit.ratio : ''}" style="width: 100%; padding: 12px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 8px; font-size: 16px;">
+                    <label style="font-size: 14px; font-family: 'montserrattexto'; color: #2a2529; font-weight: bold;">Molienda:</label>
+                    <input type="text" id="r-grind" placeholder="Clicks/N°" value="${isEditing ? recipeToEdit.grind : ''}" style="width: 100%; padding: 12px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 8px; font-size: 16px; font-family: 'montserrattexto';">
+                </div>
+            </div>
+
+            <div style="display: flex; gap: 10px;">
+                <div style="flex: 1; display: flex; flex-direction: column; gap: 5px;">
+                    <label style="font-size: 14px; font-family: 'montserrattexto'; color: #2a2529; font-weight: bold;">Tueste:</label>
+                    <input type="text" id="r-roast" placeholder="Ej. Claro" value="${isEditing && recipeToEdit.roast ? recipeToEdit.roast : ''}" style="width: 100%; padding: 12px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 8px; font-size: 16px; font-family: 'montserrattexto';">
+                </div>
+                <div style="flex: 1; display: flex; flex-direction: column; gap: 5px;">
+                    <label style="font-size: 14px; font-family: 'montserrattexto'; color: #2a2529; font-weight: bold;"> Ratio:</label>
+                    <input type="text" id="r-ratio" placeholder="Ej. 1:15" value="${isEditing && recipeToEdit.ratio ? recipeToEdit.ratio : ''}" style="width: 100%; padding: 12px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 8px; font-size: 16px; font-family: 'montserrattexto';">
                 </div>
             </div>
 
             <hr style="width: 100%; margin: 15px 0; border: 0; border-top: 1px solid #e0dcd2;">
             
-            <h3 style="margin: 0; text-align: center; color: #2c1e16; font-family: 'Croissant One', serif;">Fases de Preparación</h3>
+            <h3 style="margin: 0; text-align: center; color: #2a2529; font-family: 'montserratsubtitulos', serif;">Fases de Preparación</h3>
             <div id="phases-container"></div>
             
-            <div style="display: flex; gap: 10px; align-items: center; margin-top: 10px;">
-                <button type="button" onclick="addPhase('vertido')" style="padding: 12px; background-color: #2196F3; color: white; border: none; border-radius: 50px; flex: 1; cursor: pointer; font-weight: bold;">+ Vertido</button>
-                <button type="button" onclick="addPhase('espera')" style="padding: 12px; background-color: #FF9800; color: white; border: none; border-radius: 50px; flex: 1; cursor: pointer; font-weight: bold;">+ Espera</button>
+            <div style="display: flex; font-family: 'montserratsubtitulos'; gap: 10px; align-items: center; margin-top: 10px;">
+                <button type="button" onclick="addPhase('vertido')" style="padding: 12px; background-color: #2196F3; color: white; border: none; border-radius: 50px; flex: 1; cursor: pointer; font-weight: bold;"> Vertido</button>
+                <button type="button" onclick="addPhase('espera')" style="padding: 12px; background-color: #FF9800; color: white; border: none; border-radius: 50px; flex: 1; cursor: pointer; font-weight: bold;"> Espera</button>
             </div>
             
-            <div style="background-color: #fdfaf5; border: 1px solid #e0dcd2; padding: 15px; border-radius: 12px; text-align: center; margin-top: 20px;">
-                <b style="color: #666; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">Totales de la receta</b> <br>
-                <span style="font-size: 24px; color: #2c1e16; font-weight: bold;">💧 <span id="total-water">0</span>g  &nbsp;|&nbsp;  ⏱️ <span id="total-time">0:00</span></span>
+            <div style="background-color: #2a2529; padding: 15px; border-radius: 12px; text-align: center; margin-top: 20px;">
+                <b style="color: #f3f0e7; font-family: 'montserrattexto'; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">Totales de la receta</b> <br>
+                <span style="font-size: 24px; font-family: 'montserratsubtitulos'; color: #f3f0e7; font-weight: bold;">💧 <span id="total-water">0</span>g  &nbsp;|&nbsp;  ⏱️ <span id="total-time">0:00</span></span>
             </div>
 
             <div style="display: flex; gap: 10px; margin-top: 20px;">
-                <button type="button" onclick="renderRecipeList()" style="flex: 1; padding: 15px; background-color: transparent; color: #d32f2f; border: 2px solid #d32f2f; border-radius: 50px; font-weight: bold; cursor: pointer; font-size: 16px;">Cancelar</button>
-                <button type="submit" style="flex: 1.5; padding: 15px; background-color: #2c1e16; color: white; border: none; border-radius: 50px; font-weight: bold; cursor: pointer; font-size: 16px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">${btnText}</button>
+                <button type="button" onclick="renderRecipeList()" style="flex: 1; padding: 15px; background-color: #d32f2f; color: #f3f0e7; border: none; border-radius: 50px; font-family: 'montserratsubtitulos'; cursor: pointer; font-size: 16px;">Cancelar</button>
+                <button type="submit" style="flex: 1.5; padding: 15px; background-color: #2a2529; color: #f3f0e7; border: none; border-radius: 50px; font-family: 'montserratsubtitulos'; cursor: pointer; font-size: 16px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">${btnText}</button>
             </div>
         </form>
     `;
@@ -396,8 +396,8 @@ function addPhase(type, initialWater = '', initialTime = '') {
     const isVertido = type === 'vertido';
     
     // Colores según el tipo de fase
-    const bgColor = isVertido ? '#e3f2fd' : '#fff3e0';
-    const borderColor = isVertido ? '#bbdefb' : '#ffe0b2';
+    const bgColor = isVertido ? '#2a2529' : '#2a2529';
+    const borderColor = isVertido ? '#2a2529' : '#2a2529';
     
     // Si es espera, ocultamos la caja de agua, pero mantenemos la estructura
     const waterDisplay = isVertido ? 'flex' : 'none';
@@ -409,18 +409,18 @@ function addPhase(type, initialWater = '', initialTime = '') {
         <div class="phase-item" style="border: 1px solid ${borderColor}; padding: 15px; background-color: ${bgColor}; border-radius: 8px; width: 100%; max-width: 300px; margin: 0 auto; box-sizing: border-box;">
             
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
-                <p style="margin: 0; font-weight: bold; color: #333;">${isVertido ? '💧 Vertido' : '⏳ Espera'}</p>
+                <p style="margin: 0; font-family: 'montserratsubtitulos'; color: #f3f0e7;">${isVertido ? '💧 Vertido' : '⏳ Espera'}</p>
                 <button type="button" onclick="this.parentElement.parentElement.remove(); updateTotals();" style="background: none; border: none; color: #f44336; cursor: pointer; font-weight: bold; font-size: 14px;">❌ </button>
             </div>
             
             <div style="display: flex; gap: 10px;">
                 <div style="flex: 1; display: ${waterDisplay}; flex-direction: column; gap: 5px;">
-                    <label style="font-size: 13px;"><b>Agua (g):</b></label>
-                    <input type="number" class="phase-water" placeholder="0" value="${initialWater}" min="0" oninput="updateTotals()" ${isVertido ? 'required' : ''} style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; font-family: inherit;">
+                    <label style="font-size: 13px; color: #f3f0e7"><b>Agua (g):</b></label>
+                    <input type="number" class="phase-water" placeholder="0" value="${initialWater}" min="0" oninput="updateTotals()" ${isVertido ? 'required' : ''} style="width: 100%; padding: 10px; border: none; border-radius: 6px; box-sizing: border-box; font-family: 'montserrattexto';">
                 </div>
                 <div style="flex: 1; display: flex; flex-direction: column; gap: 5px;">
-                    <label style="font-size: 13px;"><b>Tiempo (s):</b></label>
-                    <input type="number" class="phase-time" placeholder="0" value="${initialTime}" min="0" oninput="updateTotals()" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; font-family: inherit;">
+                    <label style="font-size: 13px; color: #f3f0e7"><b>Tiempo (s):</b></label>
+                    <input type="number" class="phase-time" placeholder="0" value="${initialTime}" min="0" oninput="updateTotals()" required style="width: 100%; padding: 10px; border: none; border-radius: 6px; box-sizing: border-box; font-family: 'montserrattexto';">
                 </div>
             </div>
             
@@ -539,8 +539,8 @@ function renderTimerScreen() {
     const appContent = document.getElementById('app-content');
     const step = currentRecipe.steps[currentStepIndex];
     const isVertido = step.type === 'vertido';
-    const progressColor = isVertido ? '#1565c0' : '#e65100';
-    const trackColor = isVertido ? '#e3f2fd' : '#fff3e0';
+    const progressColor = isVertido ? '#4CAF50' : '#d32f2f';
+    const trackColor = isVertido ? '#2a2529' : '#2a2529';
     
     let nextStepHtml = currentStepIndex < currentRecipe.steps.length - 1 
         ? `Siguiente: ${currentRecipe.steps[currentStepIndex + 1].name}` : `Último paso`;
@@ -560,13 +560,13 @@ function renderTimerScreen() {
                 justify-content: center;
             ">
                 <img src="volver.png" alt="Volver" style="
-                    width: 100%; 
-                    height: 100%; 
+                    width: 80%; 
+                    height: 80%; 
                     object-fit: contain; 
                 ">
             </button>
             
-            <h2 style="margin: 0; font-size: 20px;">${currentRecipe.name}</h2>
+            <h2 style="margin: 0; font-size: 25px; font-family: 'montserrattitulo'; ">${currentRecipe.name}</h2>
             <div style="width: 40px;"></div>
         </div>
 
@@ -577,26 +577,26 @@ function renderTimerScreen() {
             </svg>
             
             <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
-                <h3 style="margin: 0 0 8px 0; color: ${progressColor}; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px;">Paso ${currentStepIndex + 1}: ${step.name}</h3>
+                <h3 style="margin: 0 0 8px 0; color: ${progressColor}; font-size: 14px; font-family: 'montserratsubtitulos'; text-transform: uppercase; letter-spacing: 0.5px;">Paso ${currentStepIndex + 1}: ${step.name}</h3>
                 
                 <div style="margin-bottom: 8px;">
-                    <span style="font-size: 12px; color: #666; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Objetivo Báscula</span><br>
-                    <span style="font-size: 52px; font-weight: bold; line-height: 1.1; color: #2c1e16;">${step.accumulatedWater}g</span>
+                    <span style="font-size: 12px; color: #666; font-family: 'montserratsubtitulos'; text-transform: uppercase; letter-spacing: 1px;">Objetivo Báscula</span><br>
+                    <span style="font-size: 50px; font-family: 'montserratsubtitulos'; line-height: 1.1; color: #2c1e16;">${step.accumulatedWater}g</span>
                 </div>
                 
-                <div style="font-size: 20px; font-weight: bold; color: #666; margin-bottom: 12px; display: flex; align-items: center; justify-content: center; gap: 5px;">
-                    ⏱️ <span id="timer-display">${formatTime(timeRemaining)}</span>
+                <div style="font-size: 20px; font-family: 'montserratsubtitulos'; color: #666; margin-bottom: 12px; display: flex; align-items: center; justify-content: center; gap: 5px;">
+                    Tiempo: <span id="timer-display">${formatTime(timeRemaining)}</span>
                 </div>
                 
-                <p style="font-size: 16px; font-weight: bold; margin: 0; color: ${progressColor};">${isVertido ? `Vierte ${step.targetWater}g` : `Espera...`}</p>
+                <p style="font-size: 16px; font-family: 'montserratsubtitulos'; margin: 0; color: ${progressColor};">${isVertido ? `Vierte ${step.targetWater}g` : `Espera...`}</p>
             </div>
         </div>
         
-        <p style="text-align: center; color: #666; font-size: 14px;">${nextStepHtml}</p>
+        <p style="text-align: center; color: #666; font-size: 14px; font-family: 'montserratsubtitulos'; ">${nextStepHtml}</p>
 
         <div style="display: flex; gap: 15px; justify-content: center; margin-top: 20px;">
-            <button id="btn-play-pause" onclick="toggleTimer()" style="padding: 15px 40px; font-size: 18px; font-weight: bold; background-color: #4CAF50; color: white; border: none; border-radius: 50px; cursor: pointer; width: 200px; text-transform: uppercase;">INICIAR</button>
-            <button onclick="nextStep(true)" style="padding: 15px 20px; font-size: 18px; background-color: #e0e0e0; border: none; border-radius: 50px; cursor: pointer;">⏭ </button>
+            <button id="btn-play-pause" onclick="toggleTimer()" style="padding: 15px 40px; font-size: 18px; font-family: 'montserratsubtitulos'; background-color: #4CAF50; color: white; border: none; border-radius: 50px; cursor: pointer; width: 200px; text-transform: uppercase;">INICIAR</button>
+            <button onclick="nextStep(true)" style="padding: 15px 20px; font-size: 18px; color: #f3f0e7; font-family: 'montserratsubtitulos'; background-color: #2a2529; border: none; border-radius: 50px; cursor: pointer;">Saltar </button>
         </div>
     `;
     
