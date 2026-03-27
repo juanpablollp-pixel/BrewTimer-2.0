@@ -406,7 +406,7 @@ function addPhase(type, initialWater = '', initialTime = '') {
     // NOTA: Hemos añadido 'width: 100%; max-width: 300px; margin: 0 auto;' al contenedor principal
     // para que sea idéntico a los inputs del formulario y no se estire.
     container.insertAdjacentHTML('beforeend', `
-        <div class="phase-item" style="border: 1px solid ${borderColor}; padding: 15px; background-color: ${bgColor}; border-radius: 8px; width: 100%; max-width: 300px; margin: 0 auto; box-sizing: border-box;">
+        <div class="phase-item" style="border: 1px solid ${borderColor}; padding: 15px; background-color: ${bgColor}; border-radius: 8px; width: 100%; max-width: 300px; margin: 10px auto; box-sizing: border-box;">
             
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
                 <p style="margin: 0; font-family: 'montserratsubtitulos'; color: #f3f0e7;">${isVertido ? '💧 Vertido' : '⏳ Espera'}</p>
